@@ -9,7 +9,7 @@ import Messages from '../Messages/Messages';
 import TextContainer from "../TextContainer/TextContainer";
 
 let socket;
-const ENDPOINT = 'https://react-chat-app-1-pi.vercel.app/';
+const ENDPOINT = 'https://react-node-chat-app-1.onrender.com/';
 
 const Chat = () => {
 
