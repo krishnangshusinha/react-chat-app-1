@@ -9,7 +9,7 @@ import Messages from '../Messages/Messages';
 import TextContainer from "../TextContainer/TextContainer";
 
 let socket;
-const ENDPOINT = 'https://react-node-chat-app-1.onrender.com/';
+
 
 const Chat = () => {
 
@@ -21,7 +21,9 @@ const Chat = () => {
 
     const location = useLocation();     // gets the location(i.e path) of current page
 
+    const ENDPOINT = 'https://react-node-chat-app-1.onrender.com/';
 
+    
     useEffect(()=>{         // by using this Hook, you tell React to perform certain operations(as mention in the call back function) whenever this component is being rendered
 
         const {name , room} = queryString.parse(location.search);       // location.search --> returns that part of the url which contains the variables
