@@ -27,7 +27,7 @@ const Chat = () => {
                                                                 // queryString.parse() --> then parses that data into an object
         
                                                                 
-        socket = io('localhost:5000' , {transports: ['websocket', 'polling', 'flashsocket']});      // this function creates a connection between the socket io server i.e present at localhost5000 and the client present in here 
+        socket = io('https://react-chat-app-1-pi.vercel.app/' , {transports: ['websocket', 'polling', 'flashsocket']});      // this function creates a connection between the socket io server i.e present at localhost5000 and the client present in here 
                                                                 
         // setting name and room to, what is entered in the url
         setRoom(room);
@@ -45,7 +45,7 @@ const Chat = () => {
             socket.off();
         }
 
-    }, ['localhost:5000' , location.search]);      // so this useEffect() get called each time you change the value of "ENDPOINT" or "locations.search" while Chat component is rendering
+    }, ['https://react-chat-app-1-pi.vercel.app/' , location.search]);      // so this useEffect() get called each time you change the value of "ENDPOINT" or "locations.search" while Chat component is rendering
     
     // so each time one enters with some localhost and location.seach value this io() connects it with the server at local host 5000 and we get a message of new connection added.
 
